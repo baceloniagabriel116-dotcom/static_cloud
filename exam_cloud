@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Terminal Dashboard</title>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: monospace, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            margin: 0;
+            padding: 1rem;
+        }
+        .terminal {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 700px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+        .top-bar {
+            background-color: #21262d;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+        .red { background-color: #ff5f56; }
+        .yellow { background-color: #ffbd2e; }
+        .green { background-color: #27c93f; }
+        .content { padding: 20px; }
+        .highlight { color: #58a6ff; }
+        .success { color: #3fb950; }
+        ul { list-style: none; padding-left: 0; }
+        li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="terminal">
+    <div class="top-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span style="margin-left: 10px; font-size: 12px; color: #8b949e;">user@static-cloud-node:~</span>
+    </div>
+    <div class="content">
+        <h2>> System Initialization Complete...</h2>
+        <p>Status: <span class="success">[ ONLINE - 200 OK ]</span></p>
+        <hr style="border-color: #30363d;">
+        <h3>> Cloud Node Info:</h3>
+        <ul>
+            <li>[<span class="highlight">NODE_NAME</span>]: Personalized Static Cloud</li>
+            <li>[<span class="highlight">DEPLOYMENT</span>]: GitHub Pages Static Hosting</li>
+            <li>[<span class="highlight">SECURITY</span>]: HTTPS Secured</li>
+            <li>[<span class="highlight">CDN_STATUS</span>]: Distributed globally</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
